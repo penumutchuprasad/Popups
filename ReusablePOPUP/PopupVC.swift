@@ -10,26 +10,80 @@ import UIKit
 
 class PopupVC: UIViewController {
 
+    
+    
+    @IBOutlet var imgVIew: UIImageView!
+    
+    @IBOutlet var inputTF: UITextField!
+    
+    
+    var onSave:((_ text:String)->())?
+    
+    
+    
+    var delegate: PopupDataSource?
+    
+    
+    
+    var image: UIImage!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        imgVIew.image = image
+        imgVIew.layer.cornerRadius = imgVIew.frame.width/2
+        imgVIew.layer.masksToBounds = true
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func onSave(_ sender: UIButton) {
+        
+        if (inputTF.text?.count)! > 0 {
+        // 1st Way
+        NotificationCenter.default.post(name: .popupInformation, object: self)
+        // 2nd Way
+        onSave?(inputTF.text!)
+        // 3rd Way
+        delegate?.onSaveDataToProcess(text: inputTF.text!)
+                
+        dismiss(animated: true, completion: nil)
+        }else {
+            
+            print("User Didnt Set Any Text")
+            inputTF.text = "Try Again"
+            dismiss(animated: true, completion: nil)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        }
+
     }
-    */
-
+    
+    
+    
+    @IBAction func onDiscard(_ sender: UIButton) {
+        
+        
+        print("""
+                User Cancelled
+                Say Thanks
+                """
+            )
+        
+        dismiss(animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }

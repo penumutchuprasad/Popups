@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+
+protocol PopupDataSource {
+    // Implement This Method To Save the Data
+    func onSaveDataToProcess(text: String)
+}

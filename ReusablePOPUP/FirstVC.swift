@@ -10,26 +10,62 @@ import UIKit
 
 class FirstVC: UIViewController {
 
+    @IBOutlet var showLabel: UILabel!
+
+    var observer: NSObjectProtocol?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+      
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPopupVC" {
+            
+            let destVC = segue.destination as! PopupVC
+            
+            destVC.image = UIImage.init(named: "becky")
+            
+            ///// Assign to a local function to access the data
+            
+            //destVC.onSave = onSaveLocal
+            
+            destVC.onSave = { data in
+                
+                self.showLabel.text = data
+            }
+            
+        }
+    }
+    
+//    func onSaveLocal(text: String)->() {
+//
+//        showLabel.text = text
+//    }
+    
+    
+    // Optional As We have Segue for this
+ 
+    @IBAction func showPOPUP(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    
+    
 }

@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+extension Notification.Name {
+    
+    static let popupInformation = Notification.Name.init("popupInformation")
+    
+}

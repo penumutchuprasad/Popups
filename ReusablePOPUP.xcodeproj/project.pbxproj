@@ -12,6 +12,13 @@
 		5B7821412014725A00C8AC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B78213F2014725A00C8AC41 /* Main.storyboard */; };
 		5B7821432014725A00C8AC41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7821422014725A00C8AC41 /* Assets.xcassets */; };
 		5B7821462014725A00C8AC41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7821442014725A00C8AC41 /* LaunchScreen.storyboard */; };
+		5B78214E201474B900C8AC41 /* SB1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B78214D201474B900C8AC41 /* SB1.storyboard */; };
+		5B78215420147F6500C8AC41 /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215320147F6500C8AC41 /* PopupVC.swift */; };
+		5B78215620148A0200C8AC41 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215520148A0200C8AC41 /* FirstVC.swift */; };
+		5B78215820148A0E00C8AC41 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215720148A0E00C8AC41 /* SecondVC.swift */; };
+		5B78215A20148A1900C8AC41 /* ThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215920148A1900C8AC41 /* ThirdVC.swift */; };
+		5B78215C2014B4AD00C8AC41 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215B2014B4AD00C8AC41 /* NotificationNameExtension.swift */; };
+		5B78215E2014CB2100C8AC41 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B78215D2014CB2100C8AC41 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		5B7821422014725A00C8AC41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7821452014725A00C8AC41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7821472014725A00C8AC41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B78214D201474B900C8AC41 /* SB1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SB1.storyboard; sourceTree = "<group>"; };
+		5B78215320147F6500C8AC41 /* PopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
+		5B78215520148A0200C8AC41 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
+		5B78215720148A0E00C8AC41 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		5B78215920148A1900C8AC41 /* ThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdVC.swift; sourceTree = "<group>"; };
+		5B78215B2014B4AD00C8AC41 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
+		5B78215D2014CB2100C8AC41 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				5B78213B2014725A00C8AC41 /* AppDelegate.swift */,
+				5B78215320147F6500C8AC41 /* PopupVC.swift */,
 				5B78213D2014725A00C8AC41 /* ViewController.swift */,
+				5B78215520148A0200C8AC41 /* FirstVC.swift */,
+				5B78215720148A0E00C8AC41 /* SecondVC.swift */,
+				5B78215920148A1900C8AC41 /* ThirdVC.swift */,
+				5B78214D201474B900C8AC41 /* SB1.storyboard */,
 				5B78213F2014725A00C8AC41 /* Main.storyboard */,
 				5B7821422014725A00C8AC41 /* Assets.xcassets */,
 				5B7821442014725A00C8AC41 /* LaunchScreen.storyboard */,
 				5B7821472014725A00C8AC41 /* Info.plist */,
+				5B78215B2014B4AD00C8AC41 /* NotificationNameExtension.swift */,
+				5B78215D2014CB2100C8AC41 /* Protocols.swift */,
 			);
 			path = ReusablePOPUP;
 			sourceTree = "<group>";
@@ -126,6 +147,7 @@
 				5B7821462014725A00C8AC41 /* LaunchScreen.storyboard in Resources */,
 				5B7821432014725A00C8AC41 /* Assets.xcassets in Resources */,
 				5B7821412014725A00C8AC41 /* Main.storyboard in Resources */,
+				5B78214E201474B900C8AC41 /* SB1.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B78215C2014B4AD00C8AC41 /* NotificationNameExtension.swift in Sources */,
+				5B78215A20148A1900C8AC41 /* ThirdVC.swift in Sources */,
+				5B78215420147F6500C8AC41 /* PopupVC.swift in Sources */,
+				5B78215820148A0E00C8AC41 /* SecondVC.swift in Sources */,
+				5B78215620148A0200C8AC41 /* FirstVC.swift in Sources */,
 				5B78213E2014725A00C8AC41 /* ViewController.swift in Sources */,
 				5B78213C2014725A00C8AC41 /* AppDelegate.swift in Sources */,
+				5B78215E2014CB2100C8AC41 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
